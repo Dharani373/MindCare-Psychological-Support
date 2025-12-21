@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Find Professional Help</title>
+    <link
+      rel="stylesheet"
+      href="{% static 'core_app/css/find_doctors.css' %}"
+    />
+  </head>
+
+  <body>
+    <div class="find-page">
+      <h1>Find Professional Mental Health Support</h1>
+      <p class="subtitle">
+        If your stress feels overwhelming, reaching out to a qualified
+        professional can make a significant difference.
+      </p>
+      <div class="disclaimer">
+        <strong>Disclaimer:</strong> This platform does not provide medical
+        diagnosis or treatment. Please consult a licensed professional.
+      </div>
+      <br />
+
+      <div class="help-card">
+        <h3>Psychiatrists and Psychologists Near You</h3>
+        <p>
+          Use Google Maps to find licensed mental health professionals near your
+          current location.
+        </p>
+
+        <a
+          href="https://www.google.com/maps/search/psychiatrist+near+me"
+          target="_blank"
+          class="map-btn"
+        >
+          📍 Search on Google Maps
+        </a>
+      </div>
+
+      <div class="help-card">
+        <h3>Mental Health Hospitals and Clinics</h3>
+        <p>
+          Search for hospitals and clinics that provide mental health services
+          in your area.
+        </p>
+
+        <a
+          href="https://www.google.com/maps/search/mental+health+clinic+near+me"
+          target="_blank"
+          class="map-btn"
+        >
+          📍 Find Clinics Nearby
+        </a>
+      </div>
+
+      <div class="back-btn">
+        <a href="{% url 'home' %}">← Back to Home</a>
+      </div>
+    </div>
+  </body>
+</html>

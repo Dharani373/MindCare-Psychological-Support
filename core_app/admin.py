@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import StressQuestion, StressResponse
 
-# Register your models here.
+admin.site.register(StressQuestion)
+admin.site.register(StressResponse)

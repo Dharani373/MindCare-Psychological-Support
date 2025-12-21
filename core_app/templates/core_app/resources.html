@@ -1,0 +1,194 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Wellness Resources</title>
+    <link rel="stylesheet" href="{% static 'core_app/css/resources.css' %}" />
+  </head>
+
+  <body>
+    <div class="resources-page">
+      <!-- Header -->
+      <div class="resources-header">
+        <h1>Wellness Resources</h1>
+        <p>
+          Practical exercises, motivational content, and trusted articles to
+          help manage stress and improve mental well-being.
+        </p>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="resources-disclaimer">
+        <strong>Note:</strong> These resources are for self-help and educational
+        purposes only and do not replace professional mental health care.
+      </div>
+
+      <!-- ================= Relaxation Exercises ================= -->
+      <div class="resource-section">
+        <h2>Relaxation and Grounding Exercises</h2>
+
+        <div class="resource-card">
+          <h3>Box Breathing</h3>
+          <ul>
+            <li>Inhale for 4 seconds</li>
+            <li>Hold for 4 seconds</li>
+            <li>Exhale for 4 seconds</li>
+            <li>Hold for 4 seconds</li>
+          </ul>
+          <p>Repeat for 2–3 minutes.</p>
+        </div>
+
+        <div class="resource-card">
+          <h3>5–4–3–2–1 Grounding Technique</h3>
+          <ul>
+            <li>5 things you can see</li>
+            <li>4 things you can feel</li>
+            <li>3 things you can hear</li>
+            <li>2 things you can smell</li>
+            <li>1 thing you can taste</li>
+          </ul>
+        </div>
+
+        <div class="resource-card">
+          <h3>Progressive Muscle Relaxation</h3>
+          <p>
+            Slowly tense each muscle group for 5 seconds, then relax. Move from
+            feet to head.
+          </p>
+        </div>
+
+        <div class="resource-card">
+          <h3>Thought Dump Exercise</h3>
+          <p>
+            Write down everything worrying you without organizing. Close the
+            list and revisit later.
+          </p>
+        </div>
+      </div>
+
+      <!-- ================= Motivational Videos ================= -->
+      <div class="resource-section">
+        <h2>Motivational and Relaxation Videos</h2>
+
+        <div class="resource-card video-card">
+          <h3>5-Minute Guided Breathing</h3>
+          <img
+            src="https://img.youtube.com/vi/odADwWzHR24/hqdefault.jpg"
+            alt="Guided Breathing"
+            class="video-thumbnail"
+          />
+          <p>A calming breathing exercise to reduce stress and anxiety.</p>
+          <a
+            href="https://www.youtube.com/watch?v=odADwWzHR24"
+            target="_blank"
+            class="watch-btn"
+          >
+            ▶ Watch on YouTube
+          </a>
+        </div>
+
+        <div class="resource-card video-card">
+          <h3>Guided Meditation for Stress</h3>
+          <img
+            src="https://img.youtube.com/vi/inpok4MKVLM/hqdefault.jpg"
+            alt="Guided Meditation"
+            class="video-thumbnail"
+          />
+          <p>A short guided meditation for relaxation and focus.</p>
+          <a
+            href="https://www.youtube.com/watch?v=inpok4MKVLM"
+            target="_blank"
+            class="watch-btn"
+          >
+            ▶ Watch on YouTube
+          </a>
+        </div>
+
+        <div class="resource-card video-card">
+          <h3>Motivation for Students Under Pressure</h3>
+          <img
+            src="https://img.youtube.com/vi/wnHW6o8WMas/hqdefault.jpg"
+            alt="Student Motivation"
+            class="video-thumbnail"
+          />
+          <p>Encouragement for students facing academic stress.</p>
+          <a
+            href="https://www.youtube.com/watch?v=wnHW6o8WMas"
+            target="_blank"
+            class="watch-btn"
+          >
+            ▶ Watch on YouTube
+          </a>
+        </div>
+      </div>
+
+      <!-- ================= Articles ================= -->
+      <div class="resource-section">
+        <h2>Trusted Articles on Stress Management</h2>
+
+        <div class="resource-card">
+          <ul class="article-list">
+            <li>
+              <a href="https://www.apa.org/topics/stress" target="_blank">
+                Managing Stress – American Psychological Association
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response"
+                target="_blank"
+              >
+                Mental Health and Well-Being – World Health Organization
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.nimh.nih.gov/health/topics/stress"
+                target="_blank"
+              >
+                Stress Overview – National Institute of Mental Health
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.health.harvard.edu/staying-healthy/how-to-reduce-stress"
+                target="_blank"
+              >
+                How to Reduce Stress – Harvard Health
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.psychologytoday.com/us/basics/stress"
+                target="_blank"
+              >
+                Understanding Stress – Psychology Today
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ================= Daily Habits ================= -->
+      <div class="resource-section">
+        <h2>Daily Wellness Habits</h2>
+
+        <div class="resource-card">
+          <ul>
+            <li>Maintain a regular sleep schedule</li>
+            <li>Take short breaks during study sessions</li>
+            <li>Limit screen time before bedtime</li>
+            <li>Stay hydrated and eat regularly</li>
+            <li>Practice gratitude or journaling</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Back Button -->
+      <div class="resources-actions">
+        <a href="{% url 'home' %}" class="btn-home">← Back to Home</a>
+      </div>
+    </div>
+  </body>
+</html>

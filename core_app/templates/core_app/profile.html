@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{% static 'core_app/css/profile.css' %}" />
+  </head>
+
+  <body>
+    <div class="profile-page">
+      <div class="profile-header">
+        <h1>My Profile</h1>
+        <p>Personal information and account details</p>
+      </div>
+
+      <form method="POST" enctype="multipart/form-data" class="profile-card">
+        {% csrf_token %}
+
+        <!-- LEFT -->
+        <div class="profile-left">
+          {% if profile.profile_photo %}
+          <div class="photo-wrapper">
+            <img src="{{ profile.profile_photo.url }}" alt="Profile Photo" />
+          </div>
+          {% else %}
+          <div class="letter-avatar">
+            {{ request.user.username|first|upper }}
+          </div>
+          {% endif %}
+
+          <label class="upload-btn hidden" id="photoUpload">
+            Change Photo
+            <input type="file" name="profile_photo" hidden />
+          </label>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="profile-right">
+          <div class="field">
+            <label>Full Name</label>
+            <input
+              type="text"
+              name="full_name"
+              value="{{ profile.full_name }}"
+            />
+          </div>
+
+          <div class="field">
+            <label>Email</label>
+            <input type="email" value="{{ request.user.email }}" disabled />
+          </div>
+
+          <div class="field">
+            <label>Date of Birth</label>
+            <input
+              type="date"
+              name="date_of_birth"
+              value="{{ profile.date_of_birth|date:'Y-m-d' }}"
+            />
+          </div>
+
+          <div class="field">
+            <label>Profession</label>
+            <input
+              type="text"
+              name="profession"
+              value="{{ profile.profession }}"
+            />
+          </div>
+
+          <div class="field readonly">
+            <label>Username</label>
+            <input type="text" value="{{ request.user.username }}" disabled />
+          </div>
+
+          <div class="actions">
+            <button type="button" class="edit-btn" id="editBtn">
+              Edit Profile
+            </button>
+
+            <button type="submit" class="save-btn hidden" id="saveBtn">
+              Save Changes
+            </button>
+            <a href="{% url 'home' %}" class="back-btn"> ← Back to Home </a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <br />
+
+    <script>
+      const editBtn = document.getElementById("editBtn");
+      const saveBtn = document.getElementById("saveBtn");
+      const inputs = document.querySelectorAll(".editable");
+      const photoUpload = document.getElementById("photoUpload");
+
+      editBtn.addEventListener("click", () => {
+        inputs.forEach((input) => (input.disabled = false));
+        saveBtn.classList.remove("hidden");
+        photoUpload.classList.remove("hidden");
+        editBtn.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>

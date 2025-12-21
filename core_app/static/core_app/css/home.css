@@ -1,0 +1,115 @@
+/* General Body */
+body {
+  background-color: #f4f6f9;
+  font-family: "Times New Roman", Times, serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  padding: 15px 0;
+  background-color: #01174f; /* DARK BLUE */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+.welcome-text {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Profile and Logout Button */
+.profile-btn {
+  background-color: #ffffff;
+  color: #01174f;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.profile-btn:hover {
+  background-color: #e0e6ff;
+  color: #01174f;
+}
+
+.logout-btn {
+  background-color: #ffffff;
+  color: #01174f;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.logout-btn:hover {
+  background-color: #e0e6ff;
+  color: #01174f;
+}
+
+/* Main Section */
+.main-section {
+  padding: 70px 0;
+  background-color: #fdfdfd;
+}
+
+.main-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  height: 100%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card h4 {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.feature-btn {
+  display: inline-block;
+  background-color: #023197;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.feature-btn:hover {
+  background-color: #022777;
+  color: #ffffff;
+}

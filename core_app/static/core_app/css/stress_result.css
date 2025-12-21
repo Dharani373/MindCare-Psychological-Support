@@ -1,0 +1,107 @@
+/* Page background */
+body {
+  background: #f4f6f9;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #333;
+}
+
+/* Page center alignment */
+.result-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card container */
+.result-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  padding: 35px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+/* Header */
+.header h1 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 25px;
+}
+
+/* Score box */
+.score-section {
+  padding: 28px;
+  border-radius: 14px;
+  margin-bottom: 22px;
+  transition: transform 0.3s ease;
+}
+
+.score-section:hover {
+  transform: scale(1.03);
+}
+
+/* Text inside score box */
+.score-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.score-value {
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.stress-level {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Stress level colors */
+.low {
+  background: #e6f7ed;
+  color: #1e7e34;
+}
+
+.medium {
+  background: #fff4e5;
+  color: #b36b00;
+}
+
+.high {
+  background: #fdecea;
+  color: #a71d2a;
+}
+
+/* Description text */
+.description p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.action-buttons .btn {
+  min-width: 160px;
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 8px;
+}

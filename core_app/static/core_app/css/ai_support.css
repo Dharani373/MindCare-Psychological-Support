@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f3f5f9;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+
+/* Page layout */
+.chat-page {
+  max-width: 1100px;
+  height: 95vh;
+  margin: 20px auto;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+/* Header */
+.chat-header {
+  background: #022777;
+  color: white;
+  padding: 18px 24px;
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.chat-header p {
+  margin: 4px 0 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Messages area */
+.chat-container {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+  background: #f8f9fc;
+}
+
+/* Message rows */
+.chat-message {
+  display: flex;
+  margin-bottom: 14px;
+}
+
+/* User message (right) */
+.chat-message.user {
+  justify-content: flex-end;
+}
+
+/* Bot message (left) */
+.chat-message.bot {
+  justify-content: flex-start;
+}
+
+/* Chat bubbles */
+.chat-bubble {
+  max-width: 65%;
+  padding: 14px 18px;
+  border-radius: 18px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+/* User bubble */
+.chat-message.user .chat-bubble {
+  background: #022777;
+  color: white;
+  border-bottom-right-radius: 6px;
+}
+
+/* Bot bubble */
+.chat-message.bot .chat-bubble {
+  background: #e9edff;
+  color: #333;
+  border-bottom-left-radius: 6px;
+}
+
+/* Input area */
+.chat-input-area {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  background: #ffffff;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+}
+
+.chat-input-area input:focus {
+  border-color: #022777;
+}
+
+.chat-input-area button {
+  margin-left: 12px;
+  padding: 0 22px;
+  background: #022777;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chat-input-area button:hover {
+  background: #011d55;
+}
+
+/* Smooth message animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animation to messages */
+.chat-message.bot .chat-bubble {
+  animation: slideInLeft 0.45s ease-out;
+}
+
+.chat-message.user .chat-bubble {
+  animation: slideInRight 0.45s ease-out;
+}
+
+/*  Crisis Alert Styling */
+.chat-message.crisis .chat-bubble {
+  background-color: #ffe5e5;
+  border-left: 6px solid #d90429;
+  color: #5a0b15;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  animation: fadeIn 0.4s ease-in;
+}
+
+.chat-message.crisis .chat-bubble::before {
+  content: "🚨 ";
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Smooth appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

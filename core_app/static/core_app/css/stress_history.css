@@ -1,0 +1,91 @@
+body {
+  background: #f4f6f9;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+
+.history-page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.page-header h1 {
+  font-weight: 700;
+  color: #022777;
+}
+
+.page-header p {
+  color: #555;
+}
+
+/* Cards */
+.card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #022777;
+}
+
+/* Chart */
+.chart-card canvas {
+  max-height: 350px;
+}
+
+/* Table */
+.table th {
+  background-color: #022777;
+  color: #ffffff;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+/* Stress badges */
+.badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.badge.low {
+  background: #28a745;
+  color: #ffffff;
+}
+
+.badge.medium {
+  background: #ffc107;
+  color: #212529;
+}
+
+.badge.high {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+/* Buttons */
+.action-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.action-buttons .btn {
+  margin: 0 10px;
+  padding: 12px 30px;
+  font-weight: 600;
+}

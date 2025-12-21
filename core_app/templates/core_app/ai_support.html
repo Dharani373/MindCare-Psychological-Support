@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AI Support Chat</title>
+    <link rel="stylesheet" href="{% static 'core_app/css/ai_support.css' %}" />
+  </head>
+
+  <body>
+    <div class="chat-page">
+      <!-- Header -->
+      <div class="chat-header">
+        <h2>AI Emotional Support</h2>
+        <br />
+        <p>
+          This AI is for emotional support only and not a replacement for
+          professional counseling.
+        </p>
+        <p></p>
+      </div>
+
+      <!-- Chat messages -->
+      <div class="chat-container" id="chatBox">
+        {% for chat in chats %}
+        <div
+          class="chat-message {{ chat.sender }} {% if chat.is_crisis %}crisis{% endif %}"
+        >
+          <div class="chat-bubble">{{ chat.message|linebreaks }}</div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Input -->
+      <form method="POST" class="chat-input-area">
+        {% csrf_token %}
+        <input
+          type="text"
+          name="message"
+          placeholder="Type your message..."
+          required
+          autocomplete="off"
+        />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <script>
+      const chatBox = document.getElementById("chatBox");
+      chatBox.scrollTop = chatBox.scrollHeight;
+    </script>
+  </body>
+</html>
