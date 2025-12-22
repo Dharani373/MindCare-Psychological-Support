@@ -24,7 +24,6 @@ staticfiles/
 
 # ML models
 *.joblib
-*.pkl
 
 # IDE
 .vscode/
