@@ -1,19 +1,25 @@
 import math
-import pickle
+import os
 import re
-from collections import defaultdict
-from pathlib import Path
+import pickle
+from django.conf import settings
 
-# Load model only ONCE
-BASE_DIR = Path(__file__).resolve().parent
+# Load model only ONCE (safe absolute path)
+MODEL_PATH = os.path.join(
+    settings.BASE_DIR,
+    "ml_models",
+    "sentiment_model.pkl"
+)
 
-with open(BASE_DIR / "sentiment_model.pkl", "rb") as f:
-    model = pickle.load(f)
+with open(MODEL_PATH, "rb") as f:
+    sentiment_model = pickle.load(f)
 
-word_counts = model["word_counts"]
-label_counts = model["label_counts"]
-vocab = model["vocab"]
-total_docs = model["total_docs"]
+# Extract trained data
+word_counts = sentiment_model["word_counts"]
+label_counts = sentiment_model["label_counts"]
+vocab = sentiment_model["vocab"]
+total_docs = sentiment_model["total_docs"]
+
 
 def predict_sentiment(text):
     words = re.findall(r"\b\w+\b", text.lower())

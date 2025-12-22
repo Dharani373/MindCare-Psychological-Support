@@ -1,7 +1,8 @@
-import math,re
+import os,re,math
 import pickle
 from collections import defaultdict
 from sentiment_data import training_data
+from django.conf import settings
 
 # Split data
 texts = [t for t, l in training_data]
@@ -31,7 +32,13 @@ model = {
     "total_docs": total_docs
 }
 
-with open("sentiment_model.pkl", "wb") as f:
-    pickle.dump(model, f)
+MODEL_PATH = os.path.join(
+    settings.BASE_DIR,
+    "ml_models",
+    "sentiment_model.pkl"
+)
+
+with open(MODEL_PATH, "rb") as f:
+    sentiment_model = pickle.load(f)
 
 print("Naive Bayes sentiment model trained & saved")
