@@ -75,6 +75,12 @@
         <a href="{% url 'home' %}" class="btn btn-primary"> Go to Home </a>
       </div>
     </div>
+    {% if records|length == 0 %}
+    <div class="alert alert-info text-center">
+      <strong>No stress history yet.</strong><br />
+      Take your first stress assessment to see trends and analysis.
+    </div>
+    {% endif %}
 
     <!-- Chart Script -->
     <script>

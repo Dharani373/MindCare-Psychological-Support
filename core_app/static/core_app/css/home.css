@@ -175,6 +175,14 @@ body {
   color: #d1d5db;
 }
 
+.alert-info {
+  background: #eef2ff;
+  color: #1e3a8a;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 1rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .footer {
