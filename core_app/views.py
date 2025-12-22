@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from .models import StressQuestion,StressResponse, StressAssessment,SupportChat,UserProfile
-from ml_models.predict_sentiment import predict_sentiment
+#from ml_models.predict_sentiment import predict_sentiment
 from .utils import is_crisis_message
 
 

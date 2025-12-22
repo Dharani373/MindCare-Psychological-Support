@@ -11,8 +11,14 @@ MODEL_PATH = os.path.join(
     "sentiment_model.pkl"
 )
 
-with open(MODEL_PATH, "rb") as f:
-    sentiment_model = pickle.load(f)
+sentiment_model = None
+
+if os.path.exists(MODEL_PATH):
+    with open(MODEL_PATH, "rb") as f:
+        sentiment_model = pickle.load(f)
+else:
+    print("sentiment_model.pkl not found — ML disabled")
+
 
 # Extract trained data
 word_counts = sentiment_model["word_counts"]
