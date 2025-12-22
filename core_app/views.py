@@ -67,16 +67,13 @@ def stress_check_view(request):
 
         for question in questions:
             value = request.POST.get(f"q{question.id}")
-
             if value is None:
                 return render(request, "core_app/stress_check.html", {
                     "questions": questions,
                     "error": "Please answer all questions."
                 })
-
             total_score += int(value)
 
-        #  Calculate stress level
         if total_score <= 13:
             stress_level = "Low"
             stress_class = "low"
@@ -87,14 +84,13 @@ def stress_check_view(request):
             stress_level = "High"
             stress_class = "high"
 
-        # SAVE TO DATABASE (THIS WAS MISSING)
-        StressResponse.objects.create(
+        #  SAVE INTO StressAssessment (CORRECT MODEL)
+        StressAssessment.objects.create(
             user=request.user,
-            total_score=total_score,
+            score=total_score,
             stress_level=stress_level
         )
 
-        # 🔹 Render result
         return render(request, "core_app/stress_result.html", {
             "score": total_score,
             "stress_level": stress_level,
