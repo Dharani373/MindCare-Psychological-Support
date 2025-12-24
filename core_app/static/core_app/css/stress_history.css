@@ -1,11 +1,11 @@
 body {
-  background: #f4f6f9;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
+  background-color: #f4f7fb;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.history-page {
-  max-width: 1100px;
+/* Main Container */
+.history-container {
+  max-width: 1000px;
   margin: 40px auto;
   padding: 20px;
 }
@@ -13,7 +13,7 @@ body {
 /* Header */
 .page-header {
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .page-header h1 {
@@ -23,69 +23,69 @@ body {
 
 .page-header p {
   color: #555;
+  font-size: 1.1rem;
 }
 
 /* Cards */
 .card {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 25px;
   margin-bottom: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: none;
 }
 
 .card-title {
-  font-size: 1.3rem;
-  font-weight: 600;
   margin-bottom: 20px;
+  font-weight: 600;
   color: #022777;
 }
 
-/* Chart */
-.chart-card canvas {
-  max-height: 350px;
-}
-
 /* Table */
-.table th {
-  background-color: #022777;
-  color: #ffffff;
+.table thead th {
+  background-color: #eef2ff;
+  color: #022777;
+  border: none;
 }
 
-.table td {
+.table td,
+.table th {
   vertical-align: middle;
 }
 
-/* Stress badges */
+/* Badges */
 .badge {
-  padding: 6px 14px;
+  padding: 8px 14px;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .badge.low {
-  background: #28a745;
-  color: #ffffff;
+  background-color: #d1f7d6;
+  color: #1e7e34;
 }
 
 .badge.medium {
-  background: #ffc107;
-  color: #212529;
+  background-color: #fff3cd;
+  color: #856404;
 }
 
 .badge.high {
-  background: #dc3545;
-  color: #ffffff;
+  background-color: #f8d7da;
+  color: #721c24;
 }
 
 /* Buttons */
 .action-buttons {
-  text-align: center;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
 }
 
-.action-buttons .btn {
-  margin: 0 10px;
-  padding: 12px 30px;
-  font-weight: 600;
+/* Responsive */
+@media (max-width: 768px) {
+  .history-container {
+    padding: 15px;
+  }
 }
