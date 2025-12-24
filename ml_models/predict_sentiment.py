@@ -13,11 +13,11 @@ MODEL_PATH = os.path.join(
 
 sentiment_model = None
 
-if os.path.exists(MODEL_PATH):
+try:
     with open(MODEL_PATH, "rb") as f:
         sentiment_model = pickle.load(f)
-else:
-    print("sentiment_model.pkl not found — ML disabled")
+except Exception as e:
+    print("Sentiment model not loaded:", e)
 
 
 # Extract trained data

@@ -1,1 +1,1 @@
-web: gunicorn digital_mental_health.wsgi
+web: gunicorn digital_mental_health.wsgi:application

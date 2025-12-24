@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from .models import StressQuestion,StressResponse, StressAssessment,SupportChat,UserProfile
-#from ml_models.predict_sentiment import predict_sentiment
+from ml_models.predict_sentiment import predict_sentiment
 from .utils import is_crisis_message
 
 
@@ -164,16 +164,23 @@ def ai_support_view(request):
                 crisis_flag = False
 
                 if sentiment == "negative":
-                    bot_reply = "I’m really sorry you’re feeling this way 💙\n."
-                    "It’s okay to feel overwhelmed. Academic stress doesn’t mean you’re weak; it means you care\n.""Take things one step at a time. Rest when you need to, ask for help when it feels heavy, and be kind to yourself. Progress, no matter how small, still counts."
+                    bot_reply =  (
+                    "I’m really sorry you’re feeling this way 💙\n\n"
+                    "It’s okay to feel overwhelmed. Academic stress doesn’t mean you’re weak; it means you care.\n"
+                    "Take things one step at a time. Rest when you need to, ask for help when it feels heavy, ""and be kind to yourself. Progress, no matter how small, still counts.")
+    
                 elif sentiment == "neutral":
-                    bot_reply = "Thanks for sharing 💙 I’m here to listen.\n"
-                    "Keep showing up at your own pace. Consistency matters more than intensity. You’re doing enough—and that’s more than fine."
+                    bot_reply =  (
+                    "Thanks for sharing 💙 I’m here to listen.\n\n"
+                    "Keep showing up at your own pace. Consistency matters more than intensity.\n"
+                    "You’re doing enough—and that’s more than fine.")
+
                 else:
-                    bot_reply = "That’s great to hear 💙.\n"
-                    "Enjoy this moment You’ve earned this feeling—through effort, patience, and growth, even if you didn’t notice it happening.\n"
-                    "Let yourself smile without guilt or worry about what comes next. Happiness doesn’t have to be loud or perfect to be real.\n"
-                    "Hold onto this light, and remember it on the days when things feel heavier."
+                    bot_reply =  (
+                    "That’s great to hear 💙\n\n"
+                    "Enjoy this moment—you’ve earned this feeling through effort, patience, and growth.\n"
+                    "Let yourself smile without guilt or worrying about what comes next.\n"
+                    "Hold onto this light and remember it on the days when things feel heavier.")
 
             # save bot message
             SupportChat.objects.create(
