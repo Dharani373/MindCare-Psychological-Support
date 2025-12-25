@@ -1,46 +1,55 @@
 #  Digital Mental Health Support System
 
-A web-based mental health support platform designed to help students **assess stress levels**, **track mental well-being over time**, and **receive emotional support** using **machine learning–based sentiment analysis** and interactive visualizations.
+A **web-based mental health support platform** designed to help students **assess stress levels**, **track mental well-being over time**, and **receive emotional support** using **machine learning–based sentiment analysis** and **interactive visualizations**.
+
+>  **Disclaimer:** This platform is intended for self-help and awareness purposes only and is **not a replacement for professional mental health care**.
 
 ---
 
 ##  Project Overview
 
-The **Digital Mental Health Support System** addresses increasing academic stress among students by providing a structured stress assessment, long-term stress tracking, and an AI-assisted emotional support interface.  
-The system focuses on **self-awareness, early detection, and ethical AI usage**, while clearly stating that it is **not a replacement for professional mental health care**.
+The *Digital Mental Health Support System* addresses increasing academic stress among students by providing a structured stress assessment, long-term stress tracking, and an AI-assisted emotional support interface.  
+The system focuses on *self-awareness, early detection, and ethical AI usage, while clearly stating that it is **not a replacement for professional mental health care*.
+
+The system emphasizes:
+- Self-awareness  
+- Early stress detection  
+- Ethical and responsible AI usage  
+
+Clear disclaimers and crisis-handling mechanisms are integrated to ensure user safety and transparency.
 
 ---
 
-##  Objectives
+## Objectives
 
-- To assess user stress levels using standardized questionnaires  
-- To analyze emotional sentiment using machine learning  
-- To track stress trends over time through visual graphs  
-- To provide ethical AI-based emotional support  
-- To improve mental health awareness among students  
+- Assess user stress levels using standardized questionnaires  
+- Analyze emotional sentiment using machine learning techniques  
+- Track stress trends over time with visual analytics  
+- Provide ethical AI-based emotional support  
+- Promote mental health awareness among students  
 
 ---
 
 ##  Technology Stack
 
-###  Frontend
+### Frontend
 - HTML5  
 - CSS3  
 - JavaScript  
 
-###  Backend
+### Backend
 - Python  
 - Django Framework  
 
-###  Database
+### Database
 - SQLite (Django default database)
 
-###  Machine Learning
+### Machine Learning
 - Scikit-learn  
 - Naive Bayes Classifier  
 - TF-IDF Vectorization  
 
-###  Data Visualization
+### Data Visualization
 - Chart.js  
 
 ---
@@ -48,109 +57,132 @@ The system focuses on **self-awareness, early detection, and ethical AI usage**,
 ##  Core Features
 
 ###  User Authentication
-- Secure login and logout
-- User-specific data isolation
+- Secure login and logout  
+- User-specific data isolation  
+- Protected access to sensitive pages  
 
 ###  Stress Assessment
-- Questionnaire-based stress evaluation
-- Automatic score calculation
-- Stress level classification (Low / Moderate / High)
+- Questionnaire-based stress evaluation  
+- Automatic score calculation  
+- Stress level classification (Low / Moderate / High)  
 
-### Stress History & Visualization
-- Stores all stress assessments with timestamps
-- Line graph visualization showing stress trends
-- Helps users identify mental health patterns over time
+###  Stress History & Visualization
+- Stores all past stress assessments with timestamps  
+- Line graph visualization using Chart.js  
+- Helps users identify long-term stress patterns  
 
-### AI Emotional Support Chat
-- ML-based sentiment analysis
-- Classifies messages as Positive, Neutral, or Negative
-- Crisis detection with red alert UI
-- Ethical disclaimer included
+###  AI Emotional Support Chat
+- Machine learning–based sentiment analysis  
+- Message classification: Positive / Neutral / Negative  
+- Crisis detection with alert-based UI  
+- Ethical disclaimer clearly displayed  
 
-### User Profile Management
-- Editable personal details (Full Name, Date of Birth, Profession)
-- Profile avatar (image or default letter-based avatar)
-- Controlled edit → save workflow
-- Stress summary displayed on profile page
+###  User Profile Management
+- Editable personal details (Full Name, Date of Birth, Profession)  
+- Profile avatar support (image or auto-generated letter avatar)  
+- Controlled edit → save workflow  
+- Stress summary shown on profile page  
 
 ---
 
-## Machine Learning Usage
+##  Machine Learning Usage
 
 ### Algorithm Used: **Naive Bayes Classifier**
 
-The Naive Bayes classifier is used for **sentiment analysis** of user messages in the AI support chat.
+The Naive Bayes classifier is used for **sentiment analysis** in the AI emotional support chat.
 
-#### Why Naive Bayes?
-- Efficient for text classification
-- Lightweight and fast
-- Performs well on small datasets
-- Easy integration with web applications
+**Why Naive Bayes?**
+- Efficient for text classification  
+- Lightweight and fast  
+- Performs well on small datasets  
+- Easy integration with web applications  
 
-#### Sentiment Categories:
+**Sentiment Categories:**
 - Positive  
 - Neutral  
 - Negative  
 
-The sentiment output is used for:
-- AI chat responses
-- Crisis detection
-- Emotional trend understanding
+Used for:
+- AI chat responses  
+- Crisis detection  
+- Emotional trend understanding  
 
 ---
 
-## Data Visualization
+##  Data Visualization
 
-- Stress scores are plotted over time using Chart.js
-- Line charts resemble stock market trends
-- Enables users to understand stress fluctuations visually
-
----
-
-## Error Handling & Reliability
-
-The system gracefully handles:
-- Missing user profile records
-- Incomplete form submissions
-- Invalid or empty inputs
-- Database mismatches
-- Template rendering errors
-
-Techniques used:
-- Server-side validation
-- Conditional rendering
-- Defensive programming
-- Django error tracing
+- Stress scores plotted over time using Chart.js  
+- Line charts resemble trend analysis graphs  
+- Improves clarity and user self-awareness  
 
 ---
 
-## Security Measures
+##  Error Handling & Reliability
 
-- Login required for sensitive pages
-- CSRF protection enabled
-- User-specific data access
-- No exposure of ML model internals or sensitive data
+Handles:
+- Missing user profiles  
+- Invalid or empty inputs  
+- Incomplete submissions  
+- Database inconsistencies  
+- Template rendering errors  
 
----
-
-## Advantages
-
-- Cost-effective solution
-- Real machine learning integration
-- Ethical and responsible AI usage
-- User-friendly and professional UI
-- Scalable and maintainable architecture
-- Suitable for academic and real-world demonstration
+Techniques:
+- Server-side validation  
+- Conditional rendering  
+- Defensive programming  
+- Django error tracing  
 
 ---
 
-## Limitations
+##  Security Measures
 
-- Not a replacement for professional mental health treatment
-- Uses classical machine learning (not deep learning)
-- Stress assessment is based on self-reported data
-- Requires internet access
+- Authentication required for sensitive pages  
+- CSRF protection enabled  
+- User-specific data access control  
+- No exposure of ML internals or sensitive data  
 
 ---
-**Author** <br>
+
+##  Screenshots
+
+###  Home Dashboard
+![Home Dashboard](Screenshots/home.png)
+
+###  AI Emotional Support Chat
+![AI Chat](Screenshots/ai_support.png)
+
+###  Stress Assessment History
+![Stress History](Screenshots/stress_history.png)
+
+###  Professional Mental Health Support
+![Professional Help](Screenshots/get_help.png)
+
+###  Wellness Resources
+![Wellness Resources](Screenshots/resources1.png)
+![Wellness Resources](Screenshots/resources2.png)
+
+---
+
+##  Advantages
+
+- Cost-effective and lightweight  
+- Real machine learning integration  
+- Ethical and responsible AI usage  
+- Clean, professional UI  
+- Scalable and maintainable architecture  
+- Suitable for academic and real-world demos  
+
+---
+
+##  Limitations
+
+- Not a substitute for professional mental health treatment  
+- Uses classical machine learning (not deep learning)  
+- Stress assessment is self-reported  
+- Requires internet access  
+
+---
+
+##  Author
+<br>
 Dharani - Dharani373
